@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Huffman Compression</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Huffman Compression Demo</h1>
+
+    <section class="card">
+      <h2>Compress (text file)</h2>
+      <input type="file" id="compressFile" accept=".txt"/>
+      <button id="compressBtn">Compress</button>
+      <div id="compressResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Decompress (.huff)</h2>
+      <input type="file" id="decompressFile" accept=".huff"/>
+      <button id="decompressBtn">Decompress</button>
+      <div id="decompressResult" class="result"></div>
+    </section>
+
+    <footer>
+      <small>Server must be running (see README). Built by Team.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
