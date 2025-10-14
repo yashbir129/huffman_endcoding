@@ -1,4 +1,5 @@
 #include "core.h"
+<<<<<<< HEAD
 #include <string.h>
 #include <stdint.h>
 
@@ -146,3 +147,28 @@ uint64_t read_uint64(FILE *f) {
     }
     return v;
 }
+=======
+
+Node* create_node(unsigned char ch, int freq, Node *left, Node *right) {
+    Node *node = (Node*)malloc(sizeof(Node));
+    node->ch = ch;
+    node->freq = freq;
+    node->left = left;
+    node->right = right;
+    return node;
+}
+
+Node* build_huffman_tree(int freq[]) {
+    // Normally you'd use a priority queue here.
+    // For demo: return a dummy node.
+    Node *root = create_node('*', 0, NULL, NULL);
+    return root;
+}
+
+void free_tree(Node *root) {
+    if (!root) return;
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
+}
+>>>>>>> f98685467c920b6d7d448c00b85ec85a17a3aa9b
