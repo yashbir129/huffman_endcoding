@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
   decoder.c
   Usage: ./decoder input.huff output.txt
@@ -68,22 +67,3 @@ int main(int argc, char **argv) {
     return decode_file(argv[1], argv[2]);
 }
 #endif
-=======
-#include "core.h"
-
-void decode_file(const char *input, const char *output) {
-    FILE *in = fopen(input, "rb");
-    FILE *out = fopen(output, "wb");
-    if (!in || !out) {
-        perror("File open error");
-        return;
-    }
-
-    int c;
-    while ((c = fgetc(in)) != EOF)
-        fputc(c, out); // placeholder (actual decoding logic goes here)
-
-    fclose(in);
-    fclose(out);
-}
->>>>>>> f98685467c920b6d7d448c00b85ec85a17a3aa9b

@@ -1,5 +1,4 @@
 #include "core.h"
-<<<<<<< HEAD
 #include <string.h>
 #include <stdio.h>
 
@@ -51,11 +50,3 @@ uint64_t read_header_and_freq(FILE *in, uint64_t freq_table[]) {
     }
     return original_size;
 }
-=======
-
-void print_freq_table(int freq[]) {
-    for (int i = 0; i < 256; i++)
-        if (freq[i] > 0)
-            printf("%c : %d\n", i, freq[i]);
-}
->>>>>>> f98685467c920b6d7d448c00b85ec85a17a3aa9b
