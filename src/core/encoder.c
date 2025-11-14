@@ -1,8 +1,22 @@
 /*
   encoder.c
-  Usage: ./encoder input.txt output.huff
-  Writes a header (original file size, unique count, symbol+freq list), then compressed bitstream.
+
+  Usage:
+      ./encoder input.txt output.huff
+
+  Description:
+      This program reads the contents of an input file, builds a Huffman
+      frequency table, and generates a compressed output file.
+
+      The output file begins with a header that stores:
+        • the original file size
+        • the number of unique characters
+        • each character along with its frequency
+
+      After the header, the program writes the compressed bitstream created
+      using the Huffman codes.
 */
+
 
 #include "core.h"
 #include <string.h>
