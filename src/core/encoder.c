@@ -4,7 +4,7 @@
   Usage:
       ./encoder input.txt output.huff
 
-  Description:
+  Description
       This program reads the contents of an input file, builds a Huffman
       frequency table, and generates a compressed output file.
 
